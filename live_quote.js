@@ -71,6 +71,6 @@ app.listen(port, function() {
 });
 
 function invalidRequest() {
-	return "INVALID REQUEST\r\nRequest must be of the form:\r\n http://live-nse.herokuapp.com/?symbol=INFY\r\n";
+	return "<h1>INVALID REQUEST</h1><p>Request must be of the form:\r\n <strong>http://live-nse.herokuapp.com/?symbol=INFY</strong></p>\r\n";
 }
 
