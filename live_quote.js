@@ -41,7 +41,7 @@ app.get('/', function(request, response) {
 			res.on('end', function() {
 				resp = resp.trim();
 				data = JSON.parse(resp);
-				response.send(data, { ['X-Created-By' : "Ashwanth Kumar <ashwanth@ashwanthkumar.in>" , 'X-Updated-On' : '01/01/2012', 'Content-Type': 'application/json']});
+				response.send(data);
 			});
 		});
 		req.end();
