@@ -4,6 +4,7 @@
  *
  *	@author Ashwanth Kumar <ashwanth@ashwanthkumar.in>
  *	@date	01/01/2012
+ *	@link	http://blog.ashwanthkumar.in/2012/01/live-nse-stock-rates.html
  */
 
 var express = require('express');
@@ -41,6 +42,11 @@ app.get('/', function(request, response) {
 			res.on('end', function() {
 				resp = resp.trim();
 				data = JSON.parse(resp);
+				
+				if(!data.data.companyName) {
+					// Invalid Symbol
+					response.send('<h1>Invalid Symbol<h1><p>Invalid Symbol given. Refer valid list of Symbols at <a href="http://blog.ashwanthkumar.in/2012/01/nse-valid-symbols.html">here</a></p>', 400);
+				}
 
 				// Cleaning up the feeds
 				delete data.otherSeries;
@@ -49,20 +55,20 @@ app.get('/', function(request, response) {
 				
 				// Now send the data
 				response.send(data);
+				
+				// @TODO Can still filter to provide more precise data 
 			});
 		});
 		req.end();
 	} else {
 		// Invalid request
-		response.send(invalidRequest(), { 'X-Created-By' : "Ashwanth Kumar <ashwanth@ashwanthkumar.in>" }, 400);
+		response.send(invalidRequest(), 400);
 	}
 });
 
 // Map all other request
 app.get('/**', function(req, res) {
-	res.send(invalidRequest(),
-			{ 'X-Created-By' : "Ashwanth Kumar <ashwanth@ashwanthkumar.in>" },
-			400);
+	res.send(invalidRequest(), 400);
 });
 
 var port = process.env.PORT || 3000;
