@@ -64,6 +64,6 @@ app.listen(port, function() {
 });
 
 function invalidRequest() {
-	return JSON.parse("'data': 'INVALID REQUEST\r\nRequest must be of the form:\r\n http://livestock.ashwanthkumar.in/?symbol=<symbol>\r\n'");
+	return "INVALID REQUEST\r\nRequest must be of the form:\r\n http://livestock.ashwanthkumar.in/?symbol=<symbol>\r\n";
 }
 
