@@ -12,7 +12,7 @@ var app = express.createServer(express.logger());
 
 // Only possible part that needs to be executed
 app.get('/', function(request, response) {
-	if(request.query.symbol || request.query.symbol.length > 0) {
+	if(request.query.symbol && request.query.symbol.length > 0) {
 		console.log(request.query.symbol);
 		
 		var http = require('http');
