@@ -1,5 +1,5 @@
 {
-  "name": "Live NSE Stock Rates",
+  "name": "live-nse-stock",
   "version": "0.0.1",
   "dependencies": {
     "express": "2.2.0"
