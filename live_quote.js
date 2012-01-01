@@ -43,7 +43,7 @@ app.get('/', function(request, response) {
 				resp = resp.trim();
 				data = JSON.parse(resp);
 				
-				if(data.data.companyName == undefined) {
+				if(data.data['companyName'] == undefined) {
 					// Invalid Symbol
 					response.send('<h1>Invalid Symbol</h1><p>Invalid Symbol given. Refer valid list of Symbols at <a href="http://blog.ashwanthkumar.in/2012/01/nse-valid-symbols.html">here</a></p>');
 				}
