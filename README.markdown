@@ -9,3 +9,5 @@ API URI - [http://live-nse.herokuapp.com/?symbol=INFY](http://live-nse.herokuapp
 
 API Requires valid NSE Symbol. You can get a snapshot of valid NSE Symbols [here](http://blog.ashwanthkumar.in/2012/01/nse-valid-symbols.html "Valid NSE Symbols as on 02/01/2012").
 
+Last Updated: Jan 2, 2012
+
