@@ -42,12 +42,12 @@ app.get('/', function(request, response) {
 			res.on('end', function() {
 				resp = resp.trim();
 				data = JSON.parse(resp);
-				
-				console.log(data.data[0].previousClose);
+				/*
 				if(data.data['companyName'] == undefined) {
 					// Invalid Symbol
 					response.send('<h1>Invalid Symbol</h1><p>Invalid Symbol given. Refer valid list of Symbols at <a href="http://blog.ashwanthkumar.in/2012/01/nse-valid-symbols.html">here</a></p>');
 				}
+				*/
 
 				// Cleaning up the feeds
 				delete data.otherSeries;
