@@ -41,6 +41,13 @@ app.get('/', function(request, response) {
 			res.on('end', function() {
 				resp = resp.trim();
 				data = JSON.parse(resp);
+
+				// Cleaning up the feeds
+				delete data.otherSeries;
+				delete data.optLink;
+				delete data.futLink;
+				
+				// Now send the data
 				response.send(data);
 			});
 		});
