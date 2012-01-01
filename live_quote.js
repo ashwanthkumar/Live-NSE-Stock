@@ -1,4 +1,3 @@
-// URL - http://www.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxGetQuoteJSON.jsp?symbol=INFY
 /**
  *	Nifty Application that can be used for creating any virtual stock market apps that needs live NSE Stock rates
  *
