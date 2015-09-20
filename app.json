@@ -1,0 +1,6 @@
+{
+  "name": "Live NSE Stock Price",
+  "description": "Self hosting, Live NSE Stock API for any kind of purpose",
+  "repository": "https://github.com/ashwanthkumar/Live-NSE-Stock",
+  "keywords": ["node", "nse", "india", "stock"]
+}
